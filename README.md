@@ -5,8 +5,6 @@ A simple and interactive chess web application built with **HTML**, **CSS**, **J
 ![image](https://github.com/user-attachments/assets/bffd71d3-5910-43a0-a859-99f93ac1d890)
 
 
-*(Replace the above path with the actual path to your screenshot.)*
-
 ---
 
 ## **Table of Contents**
