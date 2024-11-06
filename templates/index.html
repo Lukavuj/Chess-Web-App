@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chess Web App</title>
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav id="navbar">
+        <div class="nav-item" id="play-nav">
+            <span id="play-btn">Play</span>
+            <div id="play-dropdown" class="dropdown-content">
+                <a href="#" id="create-game">Create a Game</a>
+                <a href="#" id="vs-computer">Play vs Computer</a>
+            </div>
+        </div>
+        <div class="nav-item" id="theme-nav">
+            <span id="theme-btn">Theme</span>
+            <div id="theme-dropdown" class="dropdown-content">
+                <div id="theme-picker" class="theme-picker">
+                    <p>Choose Light Tile Color:</p>
+                    <input type="color" id="light-tile-color-picker" value="#f0d9b5">
+                    
+                    <p>Choose Dark Tile Color:</p>
+                    <input type="color" id="dark-tile-color-picker" value="#b58863">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Game container with Left Panel, Center Panel, and Right Panel -->
+    <div id="game-container">
+        <!-- Left Panel (Game Timer) -->
+        <div id="left-panel">
+            <div id="timer" style="display: none;">
+                <h3>Game Timer</h3>
+                <p id="game-timer">00:00</p>
+            </div>
+        </div>
+
+        <!-- Center Panel (Turn Indicator and Chessboard) -->
+        <div id="center-panel">
+            <!-- Pause Button -->
+            <button id="pause-btn" style="display: none;">Pause</button>
+            
+            <!-- Turn Indicator (initially hidden) -->
+            <div id="turn-indicator" style="display: none;">
+                <h3>Turn</h3>
+                <p id="current-turn">White's Turn</p>
+            </div>
+            <!-- Chessboard -->
+            <div id="chess-container">
+                <div id="chess-board"></div>
+            </div>
+        </div>
+
+        <!-- Right Panel (Fallen Soldiers) -->
+        <div id="right-panel">
+            <div id="fallen-soldiers" style="display: none;">
+                <h3>Fallen Soldiers</h3>
+                <div id="captured-white" class="captured-pieces">
+                    White Captured:
+                    <div id="captured-white-pieces"></div>
+                </div>
+                <div id="captured-black" class="captured-pieces">
+                    Black Captured:
+                    <div id="captured-black-pieces"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pause Menu Modal -->
+    <div id="pause-modal" class="modal">
+        <div class="modal-content">
+            <h3>Game Paused</h3>
+            <button id="resume-btn">Resume</button>
+            <button id="quit-btn">Quit</button>
+        </div>
+    </div>
+
+    <!-- Winner Modal Overlay -->
+    <div id="winner-modal" class="modal">
+        <div class="modal-content">
+            <h2 id="winner-message"></h2>
+            <button id="play-again-btn">Play Again</button>
+        </div>
+    </div>
+
+    <!-- Include your JavaScript file -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
