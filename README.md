@@ -2,7 +2,8 @@
 
 A simple and interactive chess web application built with **HTML**, **CSS**, **JavaScript**, and **Flask**. Play chess against another player or challenge the computer. Customize the board theme, keep track of time with the game timer, and view captured pieces in the Fallen Soldiers section.
 
-![Chess Web App Screenshot](static/screenshots/chess_web_app_screenshot.png)
+![image](https://github.com/user-attachments/assets/bffd71d3-5910-43a0-a859-99f93ac1d890)
+
 
 *(Replace the above path with the actual path to your screenshot.)*
 
